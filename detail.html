@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Crochet Dream - Produk Detail</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: #faf5ed;
+      color: #403d32;
+      font-family: Poppins
+    }
+
+    .sidebar {
+      background: #e8e1d4 !important;
+      width: 25%;
+      padding: 20px 12px
+    }
+
+    .logo {
+      text-align: center;
+      font-family: 'Playfair Display';
+      font-size: 29px;
+      color: #526044
+    }
+
+    .tagline {
+      text-align: center;
+      font-size: 11px;
+      color: #73765c
+    }
+
+    .sidebar a {
+      color: #47513d;
+      padding: 14px;
+      margin: 5px 8px;
+      border-radius: 9px
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: #59664b !important;
+      color: white !important
+    }
+
+    .content {
+      margin-left: 25%;
+      padding: 30px
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display';
+      color: #454c38
+    }
+
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      box-shadow: 0 3px 15px #00000010
+    }
+
+    .product img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 12px
+    }
+
+    .price {
+      color: #917849;
+      font-size: 23px;
+      font-weight: bold
+    }
+
+    .info {
+      background: #eee9df;
+      padding: 17px;
+      border-radius: 12px;
+      margin-top: 15px
+    }
+
+    .btn {
+      background: #59664b;
+      color: white;
+      border: 0;
+      border-radius: 25px;
+      padding: 12px 22px;
+      cursor: pointer
+    }
+
+    .btn:hover {
+      background: #394632
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 25px
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 12px
+    }
+
+    @media(max-width:800px) {
+      .product {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:700px) {
+      .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important
+      }
+
+      .sidebar a {
+        display: inline-block;
+        width: auto
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 15px
+      }
+
+      .product img {
+        height: 280px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="w3-sidebar w3-bar-block sidebar">
+    <h2 class="logo">♡ Crochet Dream</h2>
+    <p class="tagline">HANDMADE WITH LOVE</p>
+    <hr>
+    <a href="index.html" class="w3-bar-item w3-button">⌂ Home</a>
+    <a href="catalog.html" class="w3-bar-item w3-button">♡ Catalog</a>
+    <a href="detail.html" class="w3-bar-item w3-button active">✿ Produk Detail</a>
+    <a href="pemesanan.html" class="w3-bar-item w3-button">✉ Informasi Pemesanan</a>
+  </div>
+
+  <div class="content">
+
+    <p>PRODUCT INFORMATION ♡</p>
+    <h1>Discover the Details</h1>
+
+    <div class="product">
+
+      <div>
+        <img src="tas pita.jpeg" alt="Bow Crochet Bag">
+      </div>
+
+      <div>
+        <p>FEATURED PRODUCT</p>
+        <h2>Bow Crochet Bag</h2>
+        <p class="price">Rp150.000</p>
+        <p>★★★★★ (4.9)</p>
+
+        <p>
+          Bow Crochet Bag merupakan tas handmade dengan desain pita yang manis dan elegan. Cocok digunakan untuk
+          kegiatan sehari-hari maupun acara santai.
+        </p>
+
+        <div class="info">
+          <h3>Product Details</h3>
+          <p>♡ Bahan: Benang rajut pilihan</p>
+          <p>♡ Warna: Cream, Pink, Sage Green</p>
+          <p>♡ Model: Shoulder Bag</p>
+          <p>♡ Pengerjaan: Handmade</p>
+          <p>♡ Ukuran: Medium</p>
+        </div>
+
+        <br>
+        <a href="pemesanan.html"><button class="btn">Order Now ♡</button></a>
+      </div>
+
+    </div>
+
+    <h2 style="margin-top:30px">Product Gallery</h2>
+
+    <div class="gallery">
+      <img src="WhatsApp Image 2026-11-19 at 08.21.28.jpeg" alt="Tas rajut">
+      <img src="totebag.jpeg" alt="Tas fashion">
+      <img src="mini.jpeg" alt="Tas wanita">
+    </div>
+
+    <div class="info">
+      <h2>Why Choose Crochet Dream? ♡</h2>
+      <p>Setiap produk dibuat dengan perhatian terhadap detail, desain yang menarik, dan sentuhan handmade yang
+        memberikan kesan istimewa.</p>
+    </div>
+
+  </div>
+</body>
+
+</html>

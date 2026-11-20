@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Crochet Dream - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: #faf5ed;
+      color: #403d32;
+      font-family: Poppins
+    }
+
+    .sidebar {
+      background: #e8e1d4 !important;
+      width: 25%;
+      padding: 20px 12px
+    }
+
+    .logo {
+      text-align: center;
+      font-family: 'Playfair Display';
+      font-size: 29px;
+      color: #526044
+    }
+
+    .tagline {
+      text-align: center;
+      font-size: 11px;
+      color: #73765c
+    }
+
+    .sidebar a {
+      color: #47513d;
+      padding: 14px;
+      margin: 5px 8px;
+      border-radius: 9px
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: #59664b !important;
+      color: white !important
+    }
+
+    .content {
+      margin-left: 25%;
+      padding: 25px
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+      color: #454c38
+    }
+
+    .topbar {
+      background: #59664b;
+      color: white;
+      text-align: center;
+      padding: 8px;
+      font-size: 12px
+    }
+
+    .hero {
+      background: #eee0d5;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 25px;
+      flex-wrap: wrap
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 220px
+    }
+
+    .hero-image {
+      flex: 1;
+      min-width: 220px
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px
+    }
+
+    .btn {
+      background: #59664b;
+      color: white;
+      padding: 11px 20px;
+      border: 0;
+      border-radius: 25px;
+      cursor: pointer
+    }
+
+    .btn:hover {
+      background: #394632
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin: 25px 0
+    }
+
+    .category {
+      text-align: center;
+      background: #f0e8df;
+      padding: 12px 5px;
+      border-radius: 12px
+    }
+
+    .category img {
+      width: 75px;
+      height: 75px;
+      object-fit: cover;
+      border-radius: 50%
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px
+    }
+
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #00000010
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 9px
+    }
+
+    .price {
+      font-weight: bold;
+      color: #8b7750
+    }
+
+    .promo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 25px 0
+    }
+
+    .promo-box {
+      background: #ead9ce;
+      padding: 22px;
+      border-radius: 12px;
+      min-height: 140px
+    }
+
+    .review {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px
+    }
+
+    .review-box {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 12px
+    }
+
+    .footer {
+      background: #46523d;
+      color: white;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 12px
+    }
+
+    .footer h3 {
+      color: #f5e8d5
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none
+    }
+
+    @media(max-width:900px) {
+      .categories {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:700px) {
+      .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important
+      }
+
+      .sidebar a {
+        display: inline-block;
+        width: auto
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 15px
+      }
+
+      .products,
+      .review {
+        grid-template-columns: 1fr
+      }
+
+      .promo {
+        grid-template-columns: 1fr
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    ✦ Free Shipping on Orders Over $50 ✦ Handmade with Love ♡
+  </div>
+
+  <div class="w3-sidebar w3-bar-block sidebar">
+    <h2 class="logo">♡ Crochet Dream</h2>
+    <p class="tagline">HANDMADE WITH LOVE</p>
+    <hr>
+    <a href="index.html" class="w3-bar-item w3-button active">⌂ Home</a>
+    <a href="catalog.html" class="w3-bar-item w3-button">♡ Catalog</a>
+    <a href="detail.html" class="w3-bar-item w3-button">✿ Produk Detail</a>
+    <a href="pemesanan.html" class="w3-bar-item w3-button">✉ Informasi Pemesanan</a>
+    <hr>
+    <p class="tagline">Crafting Happiness, One Stitch at a Time ♡</p>
+  </div>
+
+  <div class="content">
+
+    <div class="hero">
+      <div class="hero-text">
+        <p>Welcome to Crochet Dream ♡</p>
+        <h1 style="font-size:38px">Handmade Crochet Bags for a More Stylish You ♡</h1>
+        <p>Trendy. Cute. Timeless.</p>
+        <a href="catalog.html"><button class="btn">Shop the Collection →</button></a>
+      </div>
+      <div class="hero-image">
+        <img src="tas lucu.jpg" alt="Koleksi tas">
+      </div>
+    </div>
+
+    <h2 style="text-align:center;margin-top:30px">Explore Our Collection ♡</h2>
+
+    <div class="categories">
+      <div class="category">
+        <img src="totebag.jpg">
+        <p>Tote Bags</p>
+      </div>
+      <div class="category">
+        <img src="shoulder.jpg">
+        <p>Shoulder Bags</p>
+      </div>
+      <div class="category">
+        <img src="bunga.jpeg">
+        <p>Daisy Bags</p>
+      </div>
+      <div class="category">
+        <img src="mini bag.jpg">
+        <p>Mini Bags</p>
+      </div>
+      <div class="category">
+        <img src="Prettiest Free Crochet Heart Bag Pattern is Here___.jpg">
+        <p>Heart Bags</p>
+      </div>
+      <div class="category">
+        <img src="Handmade Crochet Drawstring Pouch _ Choose Your Favorite Design.jpg">
+        <p>Drawstring Bags</p>
+      </div>
+    </div>
+
+    <h2>Featured Collection ♡</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <img src="Trendy Crochet Flower Bag with Pink Bow _ Handmade Aesthetic Bag for Women.jpg">
+        <h3>Bow Crochet Bag</h3>
+        <p class="price">Rp150.000</p>
+        <p>★★★★★ (4.9)</p>
+        <a href="detail.html"><button class="btn">Detail Produk</button></a>
+      </div>
+
+      <div class="card">
+        <img src="bunga.jpeg">
+        <h3>Flower Crochet Bag</h3>
+        <p class="price">Rp175.000</p>
+        <p>★★★★★ (4.9)</p>
+        <a href="detail.html"><button class="btn">Detail Produk</button></a>
+      </div>
+
+      <div class="card">
+        <img src="mini bag.jpg">
+        <h3>Cute Bow Bag</h3>
+        <p class="price">Rp125.000</p>
+        <p>★★★★★ (4.8)</p>
+        <a href="detail.html"><button class="btn">Detail Produk</button></a>
+      </div>
+
+    </div>
+
+    <div class="promo">
+      <div class="promo-box">
+        <h2>Get 10% Off ♡</h2>
+        <p>On Your First Order</p>
+        <a href="catalog.html"><button class="btn">Shop Now →</button></a>
+      </div>
+      <div class="promo-box">
+        <h2>Stay Inspired!</h2>
+        <p>Follow us for new arrivals, ideas and more ♡</p>
+        <a href="pemesanan.html"><button class="btn">Follow Us →</button></a>
+      </div>
+    </div>
+
+    <h2 style="text-align:center">What Our Customers Say ♡</h2>
+
+    <div class="review">
+      <div class="review-box">
+        <p style="color:#c49b45">★★★★★</p>
+        <p>"Absolutely love my crochet bag! So cute and high quality."</p>
+        <b>— Ayesha K.</b>
+      </div>
+      <div class="review-box">
+        <p style="color:#c49b45">★★★★★</p>
+        <p>"Perfect for everyday use. Highly recommended!"</p>
+        <b>— Sara M.</b>
+      </div>
+      <div class="review-box">
+        <p style="color:#c49b45">★★★★★</p>
+        <p>"Handmade with so much love! I'm obsessed ♡"</p>
+        <b>— Hira S.</b>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="w3-row-padding">
+        <div class="w3-third">
+          <h3>♡ Crochet Dream</h3>
+          <p>Handmade with Love ♡</p>
+          <p>Crafting happiness, one stitch at a time.</p>
+        </div>
+        <div class="w3-third">
+          <h3>Quick Links</h3>
+          <p><a href="index.html">Home</a></p>
+          <p><a href="catalog.html">Catalog</a></p>
+          <p><a href="detail.html">Produk Detail</a></p>
+          <p><a href="pemesanan.html">Pemesanan</a></p>
+        </div>
+        <div class="w3-third">
+          <h3>Customer Care</h3>
+          <p>Shipping Info</p>
+          <p>Returns & Exchanges</p>
+          <p>FAQs</p>
+          <p>Track Your Order</p>
+        </div>
+      </div>
+      <hr>
+      <p style="text-align:center">© 2026 Crochet Dream. All Rights Reserved ♡</p>
+    </div>
+
+  </div>
+</body>
+
+</html>

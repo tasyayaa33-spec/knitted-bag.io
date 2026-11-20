@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <title>Crochet Dream - Pemesanan</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: #faf5ed;
+      color: #403d32;
+      font-family: Poppins
+    }
+
+    .sidebar {
+      background: #e8e1d4 !important;
+      width: 25%;
+      padding: 20px 12px
+    }
+
+    .logo {
+      text-align: center;
+      font-family: 'Playfair Display';
+      font-size: 29px;
+      color: #526044
+    }
+
+    .tagline {
+      text-align: center;
+      font-size: 11px;
+      color: #73765c
+    }
+
+    .sidebar a {
+      color: #47513d;
+      padding: 14px;
+      margin: 5px 8px;
+      border-radius: 9px
+    }
+
+    .sidebar a:hover,
+    .sidebar a.active {
+      background: #59664b !important;
+      color: white !important
+    }
+
+    .content {
+      margin-left: 25%;
+      padding: 30px
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display';
+      color: #454c38
+    }
+
+    .box {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 3px 15px #00000010;
+      margin-bottom: 20px
+    }
+
+    .step {
+      background: #f0ebe2;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 13px 0
+    }
+
+    .number {
+      background: #59664b;
+      color: white;
+      border-radius: 50%;
+      padding: 8px 13px;
+      margin-right: 10px
+    }
+
+    .btn {
+      background: #59664b;
+      color: white;
+      border: 0;
+      border-radius: 25px;
+      padding: 12px 22px;
+      cursor: pointer
+    }
+
+    .btn:hover {
+      background: #394632
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px
+    }
+
+    .contact-item {
+      background: #eee5da;
+      padding: 18px;
+      border-radius: 12px
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #d8d0c2;
+      border-radius: 8px;
+      margin: 8px 0 15px;
+      font-family: Poppins
+    }
+
+    @media(max-width:850px) {
+      .contact {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:700px) {
+      .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        position: relative !important
+      }
+
+      .sidebar a {
+        display: inline-block;
+        width: auto
+      }
+
+      .content {
+        margin-left: 0;
+        padding: 15px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="w3-sidebar w3-bar-block sidebar">
+    <h2 class="logo">♡ Crochet Dream</h2>
+    <p class="tagline">HANDMADE WITH LOVE</p>
+    <hr>
+    <a href="index.html" class="w3-bar-item w3-button">⌂ Home</a>
+    <a href="catalog.html" class="w3-bar-item w3-button">♡ Catalog</a>
+    <a href="detail.html" class="w3-bar-item w3-button">✿ Produk Detail</a>
+    <a href="pemesanan.html" class="w3-bar-item w3-button active">✉ Informasi Pemesanan</a>
+  </div>
+
+  <div class="content">
+
+    <p>WE ARE HERE FOR YOU ♡</p>
+    <h1>Let's Make Your Order!</h1>
+    <p>Temukan tas rajut favoritmu dan lakukan pemesanan dengan mudah.</p>
+
+    <div class="box">
+      <h2>How To Order ♡</h2>
+
+      <div class="step">
+        <h3><span class="number">01</span>Choose Your Product</h3>
+        <p>Pilih produk tas rajut favoritmu melalui halaman catalog.</p>
+      </div>
+
+      <div class="step">
+        <h3><span class="number">02</span>Contact Us</h3>
+        <p>Hubungi kami melalui WhatsApp untuk melakukan pemesanan.</p>
+      </div>
+
+      <div class="step">
+        <h3><span class="number">03</span>Confirm Your Order</h3>
+        <p>Tentukan nama produk, warna, dan jumlah pesanan.</p>
+      </div>
+
+      <div class="step">
+        <h3><span class="number">04</span>Payment</h3>
+        <p>Lakukan pembayaran sesuai informasi yang diberikan penjual.</p>
+      </div>
+
+      <div class="step">
+        <h3><span class="number">05</span>Shipping</h3>
+        <p>Pesanan akan diproses dan dikirim ke alamat tujuan.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2>Order Form ♡</h2>
+
+      <form onsubmit="kirimPesanan(event)">
+
+        <label>Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+
+        <label>Nama Produk</label>
+        <select id="produk" required>
+          <option value="">Pilih Produk</option>
+          <option>Bow Crochet Bag</option>
+          <option>Flower Crochet Bag</option>
+          <option>Cute Bow Bag</option>
+          <option>Classic Tote Bag</option>
+          <option>Mini Shoulder Bag</option>
+          <option>Elegant Crochet Bag</option>
+        </select>
+
+        <label>Warna</label>
+        <select id="warna" required>
+          <option value="">Pilih Warna</option>
+          <option>Cream</option>
+          <option>Pink</option>
+          <option>Sage Green</option>
+          <option>Cokelat</option>
+        </select>
+
+        <label>Jumlah Pesanan</label>
+        <input type="number" id="jumlah" min="1" placeholder="Jumlah tas" required>
+
+        <label>Alamat Pengiriman</label>
+        <textarea id="alamat" rows="3" placeholder="Masukkan alamat lengkap" required></textarea>
+
+        <button type="submit" class="btn">Kirim Pesanan via WhatsApp ♡</button>
+
+      </form>
+    </div>
+
+    <div class="box">
+      <h2>Contact Us ♡</h2>
+
+      <div class="contact">
+        <div class="contact-item">
+          <h3>WhatsApp</h3>
+          <p>Hubungi kami untuk pemesanan.</p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Instagram</h3>
+          <p>@crochetdream</p>
+        </div>
+
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p>crochetdream@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#46523d;color:white;text-align:center;padding:25px;border-radius:12px">
+      <h2 style="color:white">Crochet Dream ♡</h2>
+      <p>Handmade with Love</p>
+      <p>© 2026 Crochet Dream. All Rights Reserved.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function kirimPesanan(event) {
+      event.preventDefault();
+
+      let nama = document.getElementById("nama").value;
+      let produk = document.getElementById("produk").value;
+      let warna = document.getElementById("warna").value;
+      let jumlah = document.getElementById("jumlah").value;
+      let alamat = document.getElementById("alamat").value;
+
+      let pesan = "Halo Crochet Dream! Saya ingin memesan:%0A%0A"
+        + "Nama: " + nama + "%0A"
+        + "Produk: " + produk + "%0A"
+        + "Warna: " + warna + "%0A"
+        + "Jumlah: " + jumlah + "%0A"
+        + "Alamat: " + alamat;
+
+      window.open("https://wa.me/6281234567890?text=" + pesan, "_blank");
+    }
+  </script>
+
+</body>
+
+</html>
